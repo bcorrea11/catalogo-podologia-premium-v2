@@ -280,7 +280,7 @@ const DownsellOfferModal: React.FC<DownsellOfferModalProps> = ({ basicLink, disc
           <a className="downsell-basic-link" href={basicLink} data-cta="downsell-basic-checkout">
             <span>Não, quero apenas o catálogo por R$ 19,90</span><ArrowRight size={18} aria-hidden="true" />
           </a>
-          <p className="downsell-assurance"><ShieldCheck aria-hidden="true" /> Pagamento único · acesso imediato · 7 dias para decidir</p>
+          <p className="downsell-assurance"><ShieldCheck aria-hidden="true" /> Pagamento único · acesso imediato · 7 dias de garantia</p>
         </div>
       </div>
     </div>
@@ -369,7 +369,7 @@ const App: React.FC = () => {
               <div className="hero-assurance" aria-label="Condições da oferta">
                 <span><Zap size={15} /> Acesso imediato</span>
                 <span><InfinityIcon size={15} /> Acesso vitalício</span>
-                <span><ShieldCheck size={15} /> 7 dias para decidir</span>
+                <span><ShieldCheck size={15} /> 7 dias de garantia</span>
               </div>
             </div>
             <div className="hero-visual" aria-label="Páginas reais do Catálogo Podologia Premium">
@@ -432,14 +432,47 @@ const App: React.FC = () => {
               <span className="eyebrow eyebrow-dark">Simples de personalizar</span>
               <h2>Você não precisa criar nada do zero.</h2>
               <p>Mantenha o visual pronto e altere somente o essencial. Se quiser, personalize cada detalhe para combinar com a sua marca.</p>
-              <div className="edit-pills" aria-label="Informações que podem ser editadas"><span>Seu nome</span><span>Sua foto</span><span>Seus valores</span><span>Seu endereço</span></div>
             </div>
             <ol className="steps-list">
-              <li><span>01</span><div><strong>Receba o acesso</strong><p>O link chega no seu e-mail após a confirmação do pagamento.</p></div></li>
-              <li><span>02</span><div><strong>Edite no Canva</strong><p>Troque suas informações pelo celular ou computador.</p></div></li>
-              <li><span>03</span><div><strong>Envie para as clientes</strong><p>Baixe e compartilhe seu novo catálogo pelo WhatsApp.</p></div></li>
-              <li><span>04</span><div><strong>Conte com nosso suporte</strong><p>Se precisar de ajuda para personalizar, nossa equipe atende pelo WhatsApp de segunda a sábado.</p></div></li>
+              <li>
+                <span>01</span>
+                <div>
+                  <strong>Acesse o catálogo</strong>
+                  <p>Após a compra, você recebe o catálogo praticamente pronto, exatamente igual ao que você viu no vídeo acima. Só falta colocar as suas informações.</p>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <strong>Ajuste o básico para a sua marca</strong>
+                  <p>São apenas quatro informações que você troca — o restante pode manter como está:</p>
+                  <ul className="step-checklist">
+                    <li><Check size={14} aria-hidden="true" /> Seu nome</li>
+                    <li><Check size={14} aria-hidden="true" /> Sua foto</li>
+                    <li><Check size={14} aria-hidden="true" /> Seus valores</li>
+                    <li><Check size={14} aria-hidden="true" /> Seu endereço</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <strong>Quer ir além? Personalize o que quiser</strong>
+                  <p>O modelo é 100% editável no Canva. Você pode mudar cores, fotos, textos, serviços e ordem das páginas. Mas não é obrigatório: em menos de 10 minutos já está pronto para enviar.</p>
+                </div>
+              </li>
             </ol>
+          </div>
+          <div className="how-highlights">
+            <div><PlayCircle aria-hidden="true" /><div><strong>Tutorial em vídeo</strong><span>Incluído para guiar a edição</span></div></div>
+            <div><Smartphone aria-hidden="true" /><div><strong>Canva gratuito</strong><span>Sem necessidade de plano pago</span></div></div>
+          </div>
+          <div className="support-callout">
+            <MessageCircle aria-hidden="true" />
+            <div>
+              <strong>Suporte de segunda a sábado pelo WhatsApp</strong>
+              <p>Ficou com dúvida em qualquer etapa da edição? É só chamar.</p>
+            </div>
           </div>
           <div className="inline-cta">
             <div><span>Pagamento único</span><strong>A partir de R$ 19,90</strong></div>
