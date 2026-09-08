@@ -271,10 +271,6 @@ img, video { display: block; max-width: 100%; }
 
 .section-how { background: var(--sand); }
 .how-grid { display: grid; gap: 40px; }
-.support-callout { display: grid; grid-template-columns: 43px 1fr; gap: 14px; align-items: start; width: min(100%, 920px); margin: 20px auto 0; padding: 17px; border: 1px solid rgba(143,77,54,.18); border-radius: 18px; background: rgba(255,255,255,.68); box-shadow: 0 12px 28px rgba(56,38,31,.06); }
-.support-callout > svg { display: grid; width: 43px; height: 43px; padding: 10px; border-radius: 14px; background: var(--espresso); color: var(--champagne); }
-.support-callout strong { display: block; margin: 1px 0 4px; font-family: var(--serif); font-size: 1.15rem; line-height: 1.15; }
-.support-callout p { margin: 0; color: var(--muted); font-size: .76rem; line-height: 1.5; }
 .steps-list { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; }
 .steps-list li { display: grid; grid-template-columns: 48px 1fr; gap: 15px; padding: 22px; border: 1px solid rgba(255,255,255,.75); border-radius: 21px; background: rgba(255,255,255,.55); }
 .steps-list > li > span { display: grid; width: 45px; height: 45px; place-items: center; border-radius: 50%; background: var(--espresso); color: var(--champagne); font-family: var(--serif); font-size: 1.1rem; font-weight: 700; }
@@ -283,11 +279,11 @@ img, video { display: block; max-width: 100%; }
 .step-checklist { display: flex; flex-wrap: wrap; gap: 9px 22px; margin: 14px 0 0; padding: 0; list-style: none; }
 .step-checklist li { display: inline-flex; align-items: center; gap: 6px; padding: 0; border: none; border-radius: 0; background: none; color: var(--muted); font-size: .8rem; font-weight: 700; white-space: nowrap; }
 .step-checklist svg { flex: 0 0 auto; width: 14px; height: 14px; color: var(--clay); }
-.how-highlights { display: grid; gap: 14px; width: min(100%, 920px); margin: 30px auto 0; }
-.how-highlights > div { display: flex; align-items: center; gap: 14px; padding: 18px; border: 1px solid rgba(255,255,255,.75); border-radius: 18px; background: rgba(255,255,255,.55); }
-.how-highlights svg { flex: 0 0 auto; display: grid; width: 42px; height: 42px; padding: 10px; border-radius: 12px; background: var(--porcelain); color: var(--clay); }
-.how-highlights strong { display: block; font-family: var(--serif); font-size: 1.05rem; line-height: 1.2; }
-.how-highlights span { color: var(--muted); font-size: .78rem; }
+.how-highlights { display: grid; gap: 9px; margin-top: 13px; }
+.how-highlights > div { display: flex; align-items: center; gap: 12px; padding: 11px 13px; border: 1px solid rgba(255,255,255,.75); border-radius: 16px; background: rgba(255,255,255,.55); }
+.how-highlights svg { flex: 0 0 auto; display: grid; width: 33px; height: 33px; padding: 7px; border-radius: 10px; background: var(--porcelain); color: var(--clay); }
+.how-highlights strong { display: block; font-family: var(--serif); font-size: .96rem; line-height: 1.2; }
+.how-highlights span { color: var(--muted); font-size: .72rem; }
 .inline-cta { display: grid; gap: 16px; width: min(100%, 920px); margin: 38px auto 0; padding: 22px; border-radius: 22px; background: var(--espresso); color: white; }
 .inline-cta > div { display: flex; flex-direction: column; align-items: center; }
 .inline-cta span { color: #cbbcb3; font-size: .65rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
@@ -496,9 +492,11 @@ img, video { display: block; max-width: 100%; }
   .quick-proof span { font-size: .72rem; }
   .quick-proof strong { font-size: .78rem; }
   .section { padding: 104px 36px; }
-  .demo-grid, .how-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); align-items: center; gap: 80px; }
-  .how-grid { align-items: start; }
-  .how-highlights { grid-template-columns: repeat(2, 1fr); }
+  .demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); align-items: center; gap: 80px; }
+  .how-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); grid-template-rows: auto 1fr; grid-template-areas: "copy steps" "highlights steps"; align-items: stretch; gap: 80px; }
+  .how-grid .section-copy { grid-area: copy; }
+  .how-grid .steps-list { grid-area: steps; }
+  .how-grid .how-highlights { grid-area: highlights; align-self: end; margin-top: 0; }
   .demo-copy { margin-bottom: 0; }
   .video-stage { width: 330px; }
   .desktop-only { display: inline-flex; margin-top: 24px; color: var(--clay-dark); text-decoration-color: rgba(143,77,54,.3); }

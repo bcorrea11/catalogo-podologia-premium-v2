@@ -462,16 +462,10 @@ const App: React.FC = () => {
                 </div>
               </li>
             </ol>
-          </div>
-          <div className="how-highlights">
-            <div><PlayCircle aria-hidden="true" /><div><strong>Tutorial em vídeo</strong><span>Incluído para guiar a edição</span></div></div>
-            <div><Smartphone aria-hidden="true" /><div><strong>Canva gratuito</strong><span>Sem necessidade de plano pago</span></div></div>
-          </div>
-          <div className="support-callout">
-            <MessageCircle aria-hidden="true" />
-            <div>
-              <strong>Suporte de segunda a sábado pelo WhatsApp</strong>
-              <p>Ficou com dúvida em qualquer etapa da edição? É só chamar.</p>
+            <div className="how-highlights">
+              <div><PlayCircle aria-hidden="true" /><div><strong>Tutorial em vídeo</strong><span>Incluído para guiar a edição</span></div></div>
+              <div><Smartphone aria-hidden="true" /><div><strong>Canva gratuito</strong><span>Sem necessidade de plano pago</span></div></div>
+              <div><MessageCircle aria-hidden="true" /><div><strong>Suporte de segunda a sábado</strong><span>Dúvidas pelo WhatsApp a qualquer momento</span></div></div>
             </div>
           </div>
           <div className="inline-cta">
