@@ -32,23 +32,23 @@ const DOWNSELL_CHECKOUT = 'https://seguro.eusounat.com.br/checkout/011aced65fab'
 const VIDEO_URL = 'https://pub-74df1c9f20a84a93bb06992597f2abb7.r2.dev/V%C3%ADdeo%20LP%20Podologia.mp4';
 
 const catalogPages = [
-  { src: '/catalogo/catalogo/pagina-1.jpg', label: 'Capa do catálogo' },
-  { src: '/catalogo/catalogo/pagina-2.jpg', label: 'Página Sobre mim' },
-  { src: '/catalogo/catalogo/pagina-3.jpg', label: 'Visão geral dos cuidados' },
-  { src: '/catalogo/catalogo/pagina-4.jpg', label: 'Avaliação podológica' },
-  { src: '/catalogo/catalogo/pagina-5.jpg', label: 'Serviços de podologia preventiva' },
-  { src: '/catalogo/catalogo/pagina-7.jpg', label: 'Unhas e correções' },
-  { src: '/catalogo/catalogo/pagina-9.jpg', label: 'Micoses e alterações' },
-  { src: '/catalogo/catalogo/pagina-13.jpg', label: 'Pacotes e protocolos' },
-  { src: '/catalogo/catalogo/pagina-16.jpg', label: 'Formas de pagamento' },
+  { src: '/catalogo/catalogo/pagina-1.webp', label: 'Capa do catálogo' },
+  { src: '/catalogo/catalogo/pagina-2.webp', label: 'Página Sobre mim' },
+  { src: '/catalogo/catalogo/pagina-3.webp', label: 'Visão geral dos cuidados' },
+  { src: '/catalogo/catalogo/pagina-4.webp', label: 'Avaliação podológica' },
+  { src: '/catalogo/catalogo/pagina-5.webp', label: 'Serviços de podologia preventiva' },
+  { src: '/catalogo/catalogo/pagina-7.webp', label: 'Unhas e correções' },
+  { src: '/catalogo/catalogo/pagina-9.webp', label: 'Micoses e alterações' },
+  { src: '/catalogo/catalogo/pagina-13.webp', label: 'Pacotes e protocolos' },
+  { src: '/catalogo/catalogo/pagina-16.webp', label: 'Formas de pagamento' },
 ];
 
 const bonusItems = [
-  { slug: 'checklist', img: '/catalogo/kit/checklist.jpg', alt: 'Mockup do Checklist de Pré-Atendimento Podológico' },
-  { slug: 'guia', img: '/catalogo/kit/guia-cuidados.jpg', alt: 'Mockup do Guia de Cuidados Pós-Atendimento' },
-  { slug: 'fidelidade', img: '/catalogo/kit/cartao-fidelidade.jpg', alt: 'Mockup do Cartão Fidelidade Podológico' },
-  { slug: 'retorno', img: '/catalogo/kit/cartao-retorno.jpg', alt: 'Mockup do Cartão de Retorno Podológico' },
-  { slug: 'figurinhas', img: '/catalogo/kit/pack-figurinhas.jpg', alt: 'Mockup do Pack com mais de 100 figurinhas para Stories' },
+  { slug: 'checklist', img: '/catalogo/kit/checklist.webp', alt: 'Mockup do Checklist de Pré-Atendimento Podológico' },
+  { slug: 'guia', img: '/catalogo/kit/guia-cuidados.webp', alt: 'Mockup do Guia de Cuidados Pós-Atendimento' },
+  { slug: 'fidelidade', img: '/catalogo/kit/cartao-fidelidade.webp', alt: 'Mockup do Cartão Fidelidade Podológico' },
+  { slug: 'retorno', img: '/catalogo/kit/cartao-retorno.webp', alt: 'Mockup do Cartão de Retorno Podológico' },
+  { slug: 'figurinhas', img: '/catalogo/kit/pack-figurinhas.webp', alt: 'Mockup do Pack com mais de 100 figurinhas para Stories' },
 ];
 
 const kitBenefits = [
@@ -80,7 +80,7 @@ const kitBenefits = [
 ];
 
 const feedbackImages = [1, 4, 5, 6, 7, 9, 11, 12, 14, 15].map(
-  (number) => `/catalogo/feedbacks/feedback-${String(number).padStart(2, '0')}.jpg`,
+  (number) => `/catalogo/feedbacks/feedback-${String(number).padStart(2, '0')}.webp`,
 );
 
 const faqs = [
@@ -165,7 +165,7 @@ const DemoVideo: React.FC = () => {
           {shouldLoad ? (
             <video
               src={VIDEO_URL}
-              poster="/catalogo/video-lp-poster.jpg"
+              poster="/catalogo/video-lp-poster.webp"
               autoPlay
               muted
               loop
@@ -175,7 +175,7 @@ const DemoVideo: React.FC = () => {
               aria-label="Demonstração das 17 páginas do Catálogo Podologia Premium"
             />
           ) : (
-            <img src="/catalogo/video-lp-poster.jpg" alt="Prévia das páginas do Catálogo Podologia Premium" />
+            <img src="/catalogo/video-lp-poster.webp" alt="Prévia das páginas do Catálogo Podologia Premium" />
           )}
         </div>
       </div>
@@ -373,9 +373,9 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="hero-visual" aria-label="Páginas reais do Catálogo Podologia Premium">
-              <div className="catalog-card catalog-card-left" aria-hidden="true"><img src="/catalogo/catalogo/pagina-5.jpg" alt="" /></div>
-              <div className="phone-mockup phone-main"><span className="phone-speaker" aria-hidden="true" /><img src="/catalogo/catalogo/pagina-1.jpg" alt="Capa real do Catálogo Podologia Premium" loading="eager" /></div>
-              <div className="catalog-card catalog-card-right" aria-hidden="true"><img src="/catalogo/catalogo/pagina-13.jpg" alt="" /></div>
+              <div className="catalog-card catalog-card-left" aria-hidden="true"><img src="/catalogo/catalogo/pagina-5.webp" alt="" /></div>
+              <div className="phone-mockup phone-main"><span className="phone-speaker" aria-hidden="true" /><img src="/catalogo/catalogo/pagina-1.webp" alt="Capa real do Catálogo Podologia Premium" loading="eager" /></div>
+              <div className="catalog-card catalog-card-right" aria-hidden="true"><img src="/catalogo/catalogo/pagina-13.webp" alt="" /></div>
               <div className="page-count"><strong>17</strong><span>páginas<br />editáveis</span></div>
             </div>
           </div>
