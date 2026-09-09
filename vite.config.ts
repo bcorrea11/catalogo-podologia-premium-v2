@@ -24,7 +24,7 @@ function inlineCss(): Plugin {
 
         let result = html
         for (const asset of cssAssets) {
-          const source = typeof asset.source === 'string' ? asset.source : Buffer.from(asset.source).toString('utf-8')
+          const source = typeof asset.source === 'string' ? asset.source : new TextDecoder().decode(asset.source)
           const linkRegex = new RegExp(`<link[^>]*href="[^"]*${asset.fileName.split('/').pop()}"[^>]*>`)
           result = result.replace(linkRegex, `<style>${source}</style>`)
           delete bundle[asset.fileName]
