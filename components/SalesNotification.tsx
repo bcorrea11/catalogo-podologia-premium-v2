@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { CheckCircle2, ShoppingBag } from 'lucide-react';
 
@@ -74,14 +73,14 @@ export const SalesNotification: React.FC = () => {
 
   return (
     <div
-      className={`fixed bottom-4 left-4 z-40 transition-all duration-700 transform ${isVisible
+      className={`fixed bottom-4 left-4 z-40 transition-all duration-700 transform ${
+        isVisible
           ? 'translate-y-0 opacity-100'
           : 'translate-y-10 opacity-0 pointer-events-none'
-        }`}
+      }`}
     >
-      <div className="bg-white/90 backdrop-blur-md border border-[#C4836A]/30 shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-2xl p-4 max-w-[300px] flex items-center gap-3">
+      <div className="bg-white/90 backdrop-blur-md border border-[#9B6045]/30 shadow-[0_8px_30px_rgba(0,0,0,0.12)] rounded-2xl p-4 max-w-[300px] flex items-center gap-3">
 
-        {/* Ícone */}
         <div className="bg-[#f9ede6] p-2.5 rounded-full flex-shrink-0 relative">
           <ShoppingBag className="w-5 h-5 text-[#5d4037]" />
           <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border-2 border-white">
@@ -89,13 +88,12 @@ export const SalesNotification: React.FC = () => {
           </div>
         </div>
 
-        {/* Texto */}
         <div className="flex flex-col">
           <p className="text-[11px] text-[#5d4037] leading-tight">
             <span className="font-bold">{data.name}</span> de {data.location}
           </p>
           <p className="text-[10px] text-[#8d6e63] font-medium mt-0.5">
-            Comprou o <span className="text-[#C4836A] font-bold">{data.product}</span>
+            Comprou o <span className="text-[#9B6045] font-bold">{data.product}</span>
           </p>
           <span className="text-[9px] text-gray-400 mt-1">{data.timeAgo}</span>
         </div>

@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { SalesNotification } from './components/SalesNotification';
 import {
   ArrowRight,
   BadgeCheck,
@@ -602,6 +603,8 @@ const App: React.FC = () => {
       )}
 
       {isDownsellOpen && <DownsellOfferModal basicLink={basicLink} discountLink={discountedKitLink} onClose={closeDownsell} />}
+
+      <SalesNotification />
     </div>
   );
 };
