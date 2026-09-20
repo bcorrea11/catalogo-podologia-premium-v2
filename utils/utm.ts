@@ -16,5 +16,12 @@ export function addUTMParams(checkoutUrl: string): string {
         }
     });
 
+    // fbclid identifica o clique no anúncio do Meta — sem ele, o checkout não
+    // consegue reconstruir o cookie _fbc para o Conversions API (CAPI).
+    const fbclid = currentUrl.searchParams.get('fbclid');
+    if (fbclid) {
+        checkoutUrlObj.searchParams.set('fbclid', fbclid);
+    }
+
     return checkoutUrlObj.toString();
 }
