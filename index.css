@@ -538,3 +538,24 @@ img, video { display: block; max-width: 100%; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* Hero mobile: mockup visível na primeira tela (ordem: eyebrow, título, mockup, texto, CTA) */
+@media (max-width: 719px) {
+  .topbar { display: none; }
+  .hero { min-height: 0; padding: 22px 20px 28px; }
+  .hero-inner { display: flex; flex-direction: column; }
+  .hero-copy { display: contents; }
+  .hero .eyebrow { order: 1; font-size: .66rem; }
+  .hero h1 { order: 2; margin: 10px 0 8px; font-size: clamp(1.85rem, 8.4vw, 2.2rem); line-height: 1.04; letter-spacing: -.03em; }
+  .hero h1 em { display: inline; }
+  .hero-visual { order: 3; width: min(100%, 340px); height: 232px; margin: 6px auto 4px; }
+  .hero-visual .phone-main { width: 118px; padding: 5px; border-radius: 24px; }
+  .hero-visual .phone-main img { border-radius: 19px; }
+  .hero-visual .catalog-card { top: 34px; width: 94px; padding: 4px; border-radius: 17px; }
+  .hero-visual .catalog-card img { border-radius: 13px; }
+  .hero-visual .page-count { bottom: 14px; min-width: 96px; padding: 7px 9px; }
+  .hero-visual .page-count strong { font-size: 1.6rem; }
+  .hero-lead { order: 4; margin: 0; font-size: .92rem; line-height: 1.5; }
+  .hero-actions { order: 5; gap: 10px; margin-top: 14px; }
+  .hero-assurance { order: 6; margin-top: 14px; }
+}
