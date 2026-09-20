@@ -2,6 +2,17 @@
 <html lang="pt-BR">
 
 <head>
+  <!-- Trava de domínio: cópias hospedadas fora do nosso domínio voltam para o site oficial -->
+  <script>
+    (function () {
+      var h = location.hostname;
+      if (h === 'eusounat.com.br' || /\.eusounat\.com\.br$/.test(h)) return;
+      if (h === 'localhost' && /^(5173|4173|3000)$/.test(location.port)) return;
+      window.fbq = function () {}; // cópias não disparam o Pixel
+      location.replace('https://podologia.eusounat.com.br/catalogo/' + location.search + location.hash);
+    })();
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catálogo Podologia Premium | Editável no Canva</title>
