@@ -42,6 +42,6 @@ Rode isso sempre que o conteúdo do hero/above-the-fold mudar, antes de subir o
 ## Estrutura da oferta
 
 - Catálogo avulso por R$ 19,90.
-- Kit Completo por R$ 34,90.
+- Kit Completo por R$ 37,90.
 - Os links de checkout preservam os parâmetros UTM recebidos pela página.
 - As rotas institucionais continuam disponíveis pelos hashes do rodapé.

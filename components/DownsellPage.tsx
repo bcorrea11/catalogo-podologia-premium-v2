@@ -9,7 +9,7 @@ interface DownsellPageProps {
 
 export const DownsellPage: React.FC<DownsellPageProps> = ({ onClose }) => {
 
-    const CHECKOUT_DISCOUNT = "https://seguro.eusounat.com.br/checkout/011aced65fab"; // R$ 27,40
+    const CHECKOUT_DISCOUNT = "https://seguro.eusounat.com.br/checkout/011aced65fab"; // R$ 29,90
 
     return (
         <div className="fixed inset-0 z-[100] overflow-y-auto animate-in fade-in duration-500">
@@ -57,7 +57,7 @@ export const DownsellPage: React.FC<DownsellPageProps> = ({ onClose }) => {
                     <div className="px-6 pt-5 pb-6">
 
                         <p className="text-center text-[#8d6e63] text-xs font-medium leading-relaxed mb-4">
-                            O sistema liberou um <span className="text-[#5d4037] font-bold">desconto único de 25%</span> para você não perder essa transformação.
+                            O sistema liberou um <span className="text-[#5d4037] font-bold">desconto único de R$ 8,00</span> para você não perder essa transformação.
                         </p>
 
                         {/* Box de Preço */}
@@ -67,10 +67,10 @@ export const DownsellPage: React.FC<DownsellPageProps> = ({ onClose }) => {
                             </div>
 
                             <div className="flex flex-col items-center mt-1">
-                                <span className="text-[#bcaaa4] text-xs font-bold line-through mb-0.5">de R$ 34,90</span>
+                                <span className="text-[#bcaaa4] text-xs font-bold line-through mb-0.5">de R$ 37,90</span>
                                 <div className="flex items-baseline justify-center gap-1 text-[#5d4037]">
                                     <span className="text-base font-bold">R$</span>
-                                    <span className="text-5xl font-black tracking-tighter">27,40</span>
+                                    <span className="text-5xl font-black tracking-tighter">29,90</span>
                                 </div>
                                 <p className="text-[10px] text-[#C4836A] font-black uppercase tracking-[0.15em] mt-1">
                                     Kit Completo para Podólogas

@@ -9,7 +9,7 @@ interface UpsellPopupProps {
 
 export const UpsellPopup: React.FC<UpsellPopupProps> = ({ onClose }) => {
 
-  const CHECKOUT_DISCOUNT = "https://seguro.eusounat.com.br/checkout/011aced65fab"; // R$ 27,40
+  const CHECKOUT_DISCOUNT = "https://seguro.eusounat.com.br/checkout/011aced65fab"; // R$ 29,90
   const CHECKOUT_BASIC = "https://seguro.eusounat.com.br/checkout/95ab7b11c54f"; // R$ 19,90
 
   return (
@@ -40,7 +40,7 @@ export const UpsellPopup: React.FC<UpsellPopupProps> = ({ onClose }) => {
             <div className="mt-2 mb-1 flex justify-center">
               <div className="bg-[#ef4444] text-white px-3 py-1 rounded-full shadow-lg border border-[#2a1e16] flex items-center gap-1 animate-pulse">
                 <Tag className="w-3 h-3 fill-current" />
-                <span className="text-[10px] font-black uppercase tracking-wider">25% OFF Agora</span>
+                <span className="text-[10px] font-black uppercase tracking-wider">R$ 8,00 OFF Agora</span>
               </div>
             </div>
 
@@ -59,10 +59,10 @@ export const UpsellPopup: React.FC<UpsellPopupProps> = ({ onClose }) => {
               </div>
 
               <div className="flex flex-col items-center mt-1">
-                <span className="text-white/30 text-[10px] font-bold line-through mb-0.5">de R$ 34,90</span>
+                <span className="text-white/30 text-[10px] font-bold line-through mb-0.5">de R$ 37,90</span>
                 <div className="flex items-baseline gap-1 justify-center text-[#F2E3D5]">
                   <span className="text-base font-bold text-[#C4836A]">R$</span>
-                  <span className="text-5xl font-black tracking-tighter drop-shadow-lg">27,40</span>
+                  <span className="text-5xl font-black tracking-tighter drop-shadow-lg">29,90</span>
                 </div>
                 <p className="text-[9px] text-white/40 mt-1">Catálogo + Bônus Completos</p>
               </div>

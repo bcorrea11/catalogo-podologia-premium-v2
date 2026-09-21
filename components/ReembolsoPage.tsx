@@ -7,8 +7,8 @@ const CATALOGO = 'Catálogo Podologia Premium';
 
 const PRODUTOS = [
   'Catálogo Podologia Premium (Essencial) (R$ 19,90)',
-  'Kit Completo para Podólogas (R$ 34,90)',
-  'Kit Completo para Podólogas - 25% OFF (R$ 27,40)',
+  'Kit Completo para Podólogas',
+  'Kit Completo para Podólogas - Oferta Especial',
   'Não sei / não lembro',
 ];
 

@@ -255,9 +255,9 @@ const DownsellOfferModal: React.FC<DownsellOfferModalProps> = ({ basicLink, disc
         </button>
 
         <div className="downsell-content">
-          <span className="downsell-badge"><Sparkles aria-hidden="true" /> R$ 7,50 de desconto</span>
-          <h2 id="downsell-title">Leve o Kit Completo por só <em>R$ 7,50 a mais.</em></h2>
-          <p id="downsell-description">Você estava escolhendo somente o catálogo. Nesta condição, por R$ 27,40 no total, você também recebe os cinco materiais extras.</p>
+          <span className="downsell-badge"><Sparkles aria-hidden="true" /> R$ 8,00 de desconto</span>
+          <h2 id="downsell-title">Leve o Kit Completo por só <em>R$ 10 a mais.</em></h2>
+          <p id="downsell-description">Você estava escolhendo somente o catálogo. Nesta condição, por R$ 29,90 no total, você também recebe os cinco materiais extras.</p>
 
           <div className="downsell-products" aria-label="Cinco materiais extras incluídos no Kit Completo">
             {bonusItems.map((item) => <img key={item.slug} src={item.img} alt="" aria-hidden="true" />)}
@@ -269,14 +269,14 @@ const DownsellOfferModal: React.FC<DownsellOfferModalProps> = ({ basicLink, disc
             <li><CheckCircle2 aria-hidden="true" /> Mais de 100 figurinhas para Stories</li>
           </ul>
 
-          <div className="downsell-price-box" aria-label="Kit Completo de R$ 34,90 por R$ 27,40">
-            <span>Kit Completo de <s>R$ 34,90</s> por</span>
-            <div><small>R$</small><strong>27,40</strong></div>
+          <div className="downsell-price-box" aria-label="Kit Completo de R$ 37,90 por R$ 29,90">
+            <span>Kit Completo de <s>R$ 37,90</s> por</span>
+            <div><small>R$</small><strong>29,90</strong></div>
             <b>Condição especial liberada</b>
           </div>
 
           <a className="button button-primary button-large downsell-primary" href={discountLink} data-cta="downsell-discount-checkout">
-            Quero o Kit Completo por R$ 27,40 <ArrowRight size={19} aria-hidden="true" />
+            Quero o Kit Completo por R$ 29,90 <ArrowRight size={19} aria-hidden="true" />
           </a>
           <a className="downsell-basic-link" href={basicLink} data-cta="downsell-basic-checkout">
             <span>Não, quero apenas o catálogo por R$ 19,90</span><ArrowRight size={18} aria-hidden="true" />
@@ -492,12 +492,12 @@ const App: React.FC = () => {
           <div className="kit-hero">
             <div className="kit-copy">
               <span className="eyebrow"><Gift size={15} /> O Kit Completo</span>
-              <h2>Por só R$ 15 a mais, leve muito mais que o catálogo.</h2>
+              <h2>Por só R$ 18 a mais, leve muito mais que o catálogo.</h2>
               <p>Você recebe cinco materiais extras para organizar o pré-atendimento, orientar os cuidados, incentivar o retorno e manter sua presença profissional nos Stories.</p>
               <div className="kit-price-bridge" aria-label="Comparação de preço entre o catálogo avulso e o Kit Completo">
                 <div className="kit-price-start"><span>Catálogo avulso</span><strong>R$ 19,90</strong></div>
                 <ArrowRight className="kit-price-arrow" aria-hidden="true" />
-                <div className="kit-price-total"><small>apenas + R$ 15</small><span>Kit Completo</span><strong>R$ 34,90</strong></div>
+                <div className="kit-price-total"><small>apenas + R$ 18</small><span>Kit Completo</span><strong>R$ 37,90</strong></div>
               </div>
             </div>
             <div className="kit-showcase" aria-label="Mockups dos cinco materiais extras do Kit Completo">
@@ -517,7 +517,7 @@ const App: React.FC = () => {
           </div>
           <div className="kit-purchase-card">
             <div><span>Você recebe tudo isso</span><strong>Catálogo + tutorial em vídeo + 5 materiais extras</strong><p>Pagamento único · acesso imediato · materiais editáveis no Canva</p></div>
-            <a className="button button-primary button-large" href={premiumLink} data-cta="kit-section-premium-checkout">Quero o Kit Completo por R$ 34,90 <ArrowRight size={20} /></a>
+            <a className="button button-primary button-large" href={premiumLink} data-cta="kit-section-premium-checkout">Quero o Kit Completo por R$ 37,90 <ArrowRight size={20} /></a>
           </div>
           <button className="kit-compare-link" onClick={() => scrollTo('oferta')}>Comparar as duas versões <ChevronRight size={18} /></button>
         </section>
@@ -536,8 +536,8 @@ const App: React.FC = () => {
             <article className="price-card price-card-premium">
               <div className="popular-badge"><Sparkles size={14} /> Mais escolhido</div>
               <p className="plan-kicker">Experiência completa</p><h3>Kit Completo para Podólogas</h3>
-              <p className="price-context">Por apenas R$ 15 a mais que o catálogo avulso</p>
-              <div className="price"><small>R$</small><strong>34,90</strong></div><p className="payment-note">pagamento único</p>
+              <p className="price-context">Por apenas R$ 18 a mais que o catálogo avulso</p>
+              <div className="price"><small>R$</small><strong>37,90</strong></div><p className="payment-note">pagamento único</p>
               <ul className="offer-list">
                 <li><Check /> Catálogo Podologia Premium — 17 páginas</li><li><Check /> Tutorial completo em vídeo</li>
                 <li><MessageCircle /> Suporte pelo WhatsApp de segunda a sábado</li>

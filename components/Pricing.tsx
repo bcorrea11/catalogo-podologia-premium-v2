@@ -102,7 +102,7 @@ export const Pricing: React.FC<PricingProps> = ({ onBasicClick }) => {
               <div className="flex flex-col items-center justify-center mb-6 border-y border-white/5 py-4">
                 <div className="flex items-baseline gap-1 text-white">
                   <span className="text-lg font-bold">R$</span>
-                  <span className="text-7xl font-black tracking-tighter">34,90</span>
+                  <span className="text-7xl font-black tracking-tighter">37,90</span>
                 </div>
                 <p className="text-white/40 text-[10px] uppercase tracking-widest mt-1">Kit Completo</p>
               </div>
