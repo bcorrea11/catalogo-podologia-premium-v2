@@ -76,6 +76,38 @@
       }, 500);
     })();
   </script>
+  <!-- Jornada de compra: registra a visita no checkout (nao interfere na pagina) -->
+  <script>
+    (function () {
+      try {
+        var COOKIE = '_enj_vid';
+        var ENDPOINT = 'https://seguro.eusounat.com.br/api/lp-visit';
+        var vid = null;
+        var m = document.cookie.match(/(?:^|; )_enj_vid=([^;]*)/);
+        if (m) vid = decodeURIComponent(m[1]);
+        if (!vid) { try { vid = localStorage.getItem(COOKIE); } catch (e) {} }
+        if (!vid || !/^[A-Za-z0-9_-]{8,64}$/.test(vid)) {
+          vid = (window.crypto && window.crypto.randomUUID)
+            ? window.crypto.randomUUID()
+            : Date.now().toString(36) + Math.random().toString(36).slice(2, 12) + Math.random().toString(36).slice(2, 12);
+        }
+        try { localStorage.setItem(COOKIE, vid); } catch (e) {}
+        document.cookie = COOKIE + '=' + encodeURIComponent(vid) + '; Domain=.eusounat.com.br; Path=/; Max-Age=31536000; SameSite=Lax; Secure';
+        function send() {
+          try {
+            var body = JSON.stringify({ v: vid, u: location.href, r: document.referrer || undefined });
+            if (navigator.sendBeacon) {
+              navigator.sendBeacon(ENDPOINT, new Blob([body], { type: 'text/plain' }));
+            } else {
+              fetch(ENDPOINT, { method: 'POST', body: body, headers: { 'Content-Type': 'text/plain' }, keepalive: true, mode: 'no-cors' }).catch(function () {});
+            }
+          } catch (e) {}
+        }
+        if (document.readyState === 'complete') { setTimeout(send, 0); }
+        else { window.addEventListener('load', function () { setTimeout(send, 0); }); }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 
 <body class="marble-bg">
