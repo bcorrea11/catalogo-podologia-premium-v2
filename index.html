@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-utmify-ignore-iframe>
 
 <head>
   <!-- Trava de domínio: cópias hospedadas fora do nosso domínio voltam para o site oficial -->
@@ -80,6 +80,8 @@
   <script>
     (function () {
       try {
+        // nunca registra visitas de dentro de um iframe (so a pagina de verdade conta)
+        try { if (window.self !== window.top) return; } catch (e) { return; }
         var COOKIE = '_enj_vid';
         var ENDPOINT = 'https://seguro.eusounat.com.br/api/lp-visit';
         var vid = null;
