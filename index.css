@@ -342,6 +342,12 @@ img, video { display: block; max-width: 100%; }
 .kit-compare-link { display: flex; align-items: center; gap: 4px; margin: 20px auto 0; padding: 8px; background: transparent; color: #d9cbc2; font-size: .78rem; font-weight: 800; text-decoration: underline; text-decoration-color: rgba(241,194,157,.45); text-underline-offset: 4px; cursor: pointer; }
 .kit-compare-link svg { width: 17px; }
 
+.section-access { background: var(--porcelain); }
+.access-grid { display: grid; gap: 30px; }
+.access-visual { width: min(100%, 460px); margin: 0 auto; }
+.access-visual img { display: block; width: 100%; height: auto; filter: drop-shadow(0 22px 34px rgba(56,38,31,.18)); }
+.access-steps li { border-color: var(--line); background: white; }
+
 .section-offer { background: var(--cream); }
 .offer-heading { max-width: 760px; }
 .offer-heading > p:first-of-type { max-width: 680px; margin-right: auto; margin-left: auto; }
@@ -497,6 +503,10 @@ img, video { display: block; max-width: 100%; }
   .how-grid .section-copy { grid-area: copy; }
   .how-grid .steps-list { grid-area: steps; }
   .how-grid .how-highlights { grid-area: highlights; align-self: end; margin-top: 0; }
+  .access-grid { grid-template-columns: minmax(0,1fr) minmax(0,1.05fr); grid-template-areas: "copy visual" "steps visual"; align-items: center; column-gap: 64px; row-gap: 32px; }
+  .access-copy { grid-area: copy; align-self: end; }
+  .access-steps { grid-area: steps; align-self: start; }
+  .access-visual { grid-area: visual; width: 100%; max-width: 620px; }
   .demo-copy { margin-bottom: 0; }
   .video-stage { width: 330px; }
   .desktop-only { display: inline-flex; margin-top: 24px; color: var(--clay-dark); text-decoration-color: rgba(143,77,54,.3); }

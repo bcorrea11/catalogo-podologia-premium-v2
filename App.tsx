@@ -12,6 +12,7 @@ import {
   Gift,
   HeartHandshake,
   Infinity as InfinityIcon,
+  KeyRound,
   MessageCircle,
   Palette,
   PlayCircle,
@@ -98,8 +99,8 @@ const faqs = [
     answer: 'Se quiser manter o modelo como está, basta trocar suas informações principais. As alterações básicas podem ser feitas em poucos minutos, com o apoio do tutorial.',
   },
   {
-    question: 'Recebo o acesso na hora?',
-    answer: 'Sim. Após a confirmação do pagamento, o acesso é enviado automaticamente para o e-mail informado na compra.',
+    question: 'Como vou acessar o material?',
+    answer: 'Assim que o pagamento é aprovado, o acesso à sua área exclusiva é liberado automaticamente. É só entrar com o mesmo e-mail que você usou na compra, sem precisar de senha. Lá está tudo organizado num só lugar: comece pelo Tutorial e acesse quando e quantas vezes quiser, no celular ou no computador.',
   },
   {
     question: 'É um produto físico ou impresso?',
@@ -520,6 +521,42 @@ const App: React.FC = () => {
             <a className="button button-primary button-large" href={premiumLink} data-cta="kit-section-premium-checkout">Quero o Kit Completo por R$ 37,90 <ArrowRight size={20} /></a>
           </div>
           <button className="kit-compare-link" onClick={() => scrollTo('oferta')}>Comparar as duas versões <ChevronRight size={18} /></button>
+        </section>
+
+        <section id="acesso" className="section section-access">
+          <div className="content-grid access-grid">
+            <div className="section-copy access-copy">
+              <span className="eyebrow eyebrow-dark"><KeyRound size={15} aria-hidden="true" /> Como você vai acessar</span>
+              <h2>Acesso imediato na sua área exclusiva.</h2>
+              <p>Tudo o que você comprar fica organizado num só lugar, com visual premium, para abrir no celular ou no computador.</p>
+            </div>
+            <figure className="access-visual">
+              <img src={`${import.meta.env.BASE_URL}area-membros-podologia.webp`} width={1000} height={959} loading="lazy" decoding="async" alt="Área de membros Eu sou a Nat com o Catálogo Podologia Premium no notebook e no celular" />
+            </figure>
+            <ol className="steps-list access-steps">
+              <li>
+                <span>01</span>
+                <div>
+                  <strong>Pagamento aprovado</strong>
+                  <p>Assim que o pagamento é aprovado, o seu acesso é liberado automaticamente.</p>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <strong>Entre com o e-mail da compra</strong>
+                  <p>Use o mesmo e-mail que você informou no pagamento. Não precisa de senha.</p>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <strong>Tudo organizado num só lugar</strong>
+                  <p>Comece pelo Tutorial e acesse quando e quantas vezes quiser, no celular ou no computador.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
         </section>
 
         <section id="oferta" className="section section-offer">
