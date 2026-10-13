@@ -365,8 +365,7 @@ const App: React.FC = () => {
               <h1>Transforme um preço solto em uma apresentação que <em>valoriza o seu trabalho.</em></h1>
               <p className="hero-lead">Um catálogo digital pronto e editável no Canva para apresentar seus serviços, valores e cuidados com mais profissionalismo no WhatsApp.</p>
               <div className="hero-actions">
-                <button className="button button-primary button-large" onClick={() => scrollTo('oferta')}>Ver opções a partir de R$ 19,90 <ArrowRight size={20} aria-hidden="true" /></button>
-                <button className="button-link" onClick={() => scrollTo('demonstracao')}><PlayCircle size={19} aria-hidden="true" /> Ver o catálogo por dentro</button>
+                <button className="button button-primary button-large" onClick={() => scrollTo('demonstracao')} data-cta="hero-demo">Quero o meu <ArrowRight size={20} aria-hidden="true" /></button>
               </div>
               <div className="hero-assurance" aria-label="Condições da oferta">
                 <span><Zap size={15} /> Acesso imediato</span>
